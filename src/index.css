@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 195 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 195 30% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 30% 14%;
+    --primary: 197 83% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 195 33% 97%;
+    --secondary-foreground: 197 83% 24%;
+    --muted: 195 20% 41%;
+    --muted-foreground: 195 20% 41%;
+    --accent: 192 65% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 197 83% 24% / 0.1;
+    --input: 197 83% 24% / 0.15;
+    --ring: 192 65% 53%;
+    --radius: 0.25rem;
+
+    /* Custom Sahihi Pools Colors */
+    --blue: #0a4f6e;
+    --blue-dark: #05303f;
+    --blue-mid: #1a6e8e;
+    --cyan: #3ab5d4;
+    --cyan-light: #c8eef8;
+    --white: #ffffff;
+    --off: #f4f8fa;
+    --sand: #f7f3ed;
+    --gold: #c59a3c;
+    --gold-light: #f5e6c0;
+    --text: #162830;
+    --muted-color: #4d7280;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Skeleton shimmer animation */
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      #e8eef1 0%,
+      #f0f4f6 25%,
+      #e8eef1 50%,
+      #f0f4f6 75%,
+      #e8eef1 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Reduce motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .skeleton-shimmer {
+      animation: none;
+      background: #e8eef1;
+    }
+  }
+}
