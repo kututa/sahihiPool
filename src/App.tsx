@@ -1,13 +1,14 @@
 import Topbar from '@/components/Topbar';
 import Navbar from '@/components/Navbar';
 import ScrollTop from '@/components/ScrollTop';
-import HeroSlider from '@/sections/HeroSlider';
+import React, { Suspense, lazy } from 'react';
+const HeroSlider = lazy(() => import('@/sections/HeroSlider'));
 import QuickStrip from '@/sections/QuickStrip';
 import About from '@/sections/About';
 import Services from '@/sections/Services';
 import PoolModels from '@/sections/PoolModels';
 import Reasons from '@/sections/Reasons';
-import Testimonials from '@/sections/Testimonials';
+const Testimonials = lazy(() => import('@/sections/Testimonials'));
 import CTABanner from '@/sections/CTABanner';
 import Contact from '@/sections/Contact';
 import Footer from '@/sections/Footer';
@@ -18,13 +19,17 @@ function App() {
       <Topbar />
       <Navbar />
       <main>
-        <HeroSlider />
+        <Suspense fallback={<div className="min-h-[320px] bg-white" />}>
+          <HeroSlider />
+        </Suspense>
         <QuickStrip />
         <About />
         <Services />
         <PoolModels />
         <Reasons />
-        <Testimonials />
+        <Suspense fallback={<div className="min-h-[220px] bg-white" />}>
+          <Testimonials />
+        </Suspense>
         <CTABanner />
         <Contact />
       </main>

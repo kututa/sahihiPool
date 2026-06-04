@@ -1,74 +1,65 @@
-# React + TypeScript + Vite
+# Sahihi Pools — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing website for Sahihi Pools, a swimming pool construction and services company. Built with Vite, React, TypeScript and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- Responsive marketing site with sections for Home, About, Services, Contact, Testimonials, and more.
+- Components and UI primitives organized under `src/components` and `src/components/ui`.
+- Modern toolchain: Vite, TypeScript, TailwindCSS, Framer Motion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- Node.js 18+ (LTS recommended)
+- npm or yarn
 
-## React Compiler
+## Setup
+1. Install dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# or
+# yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Run the dev server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
-# sahihiPool
+
+3. Build for production:
+
+```bash
+npm run build
+```
+
+4. Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure (high level)
+- `src/` — Application source
+  - `components/` — Reusable components and UI primitives
+  - `pages/`, `sections/` — Page sections and views
+  - `main.tsx`, `App.tsx` — App entry
+- `public/` — Static assets (images, icons)
+- `dist/` — Generated production build (do not edit)
+
+## Scripts
+Taken from `package.json`:
+
+- `dev` — Starts Vite dev server
+- `build` — TypeScript build and Vite production build
+- `preview` — Preview production build locally
+- `lint` — Run ESLint across the repo
+
+## Notes
+- After changing source files, run `npm run build` to regenerate the `dist/` bundle. I updated the author name in `src/sections/*`; to reflect that in `dist/`, rebuild the project.
+- Tailwind configuration is in `tailwind.config.js` and PostCSS in `postcss.config.js`.
+
+## Contributing
+Feel free to open issues or submit pull requests for fixes and improvements.
+
+## License
+Specify your license here (e.g., MIT). If you want, I can add a `LICENSE` file.

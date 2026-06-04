@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sahihipools.example/sitemap.xml
+Host: https://sahihipools.example

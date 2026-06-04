@@ -189,7 +189,7 @@ const Contact = () => {
                   <div className="text-xs uppercase tracking-wider text-[#4d7280] mb-1">
                     Lead Engineer
                   </div>
-                  <div className="text-[0.95rem] text-[#05303f] font-medium">Robert M. Icututa</div>
+                  <div className="text-[0.95rem] text-[#05303f] font-medium">Robert M. Kututa</div>
                 </div>
               </div>
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Topbar = () => {
   return (
-    <motion.div
+    <motion.header
       className="bg-[#05303f] text-white/60 text-xs py-2 px-[5vw] flex justify-between items-center"
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -29,7 +29,7 @@ const Topbar = () => {
       <div className="hidden md:block text-xs tracking-wide">
         Kenya&apos;s Trusted Swimming Pool Engineers
       </div>
-    </motion.div>
+    </motion.header>
   );
 };
 

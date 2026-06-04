@@ -44,6 +44,9 @@ const About = () => {
             <img
               src="/images/about1.jpg"
               alt="Pool construction work"
+              width={1200}
+              height={800}
+              decoding="async"
               className="w-full h-full object-cover min-h-[380px]"
               loading="lazy"
             />
@@ -52,6 +55,9 @@ const About = () => {
             <img
               src="/images/about2.jpg"
               alt="Pool equipment and maintenance"
+              width={800}
+              height={800}
+              decoding="async"
               className="w-full h-full object-cover aspect-square"
               loading="lazy"
             />
@@ -60,6 +66,9 @@ const About = () => {
             <img
               src="/images/about3.jpg"
               alt="Pool tile craftsmanship"
+              width={800}
+              height={800}
+              decoding="async"
               className="w-full h-full object-cover aspect-square"
               loading="lazy"
             />
@@ -87,7 +96,7 @@ const About = () => {
           <motion.p className="text-[#4d7280] leading-relaxed mb-4 text-[0.97rem]" variants={fadeUp}>
             <strong className="text-[#162830]">Sahihi Pools</strong> is Kenya&apos;s trusted name in
             swimming pool engineering. Led by{' '}
-            <strong className="text-[#162830]">Robert M. Icututa</strong>, our team brings deep
+            <strong className="text-[#162830]">Robert M. Kututa</strong>, our team brings deep
             technical expertise and a passion for perfection to every project we undertake.
           </motion.p>
           <motion.p className="text-[#4d7280] leading-relaxed mb-4 text-[0.97rem]" variants={fadeUp}>

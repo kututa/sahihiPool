@@ -11,7 +11,7 @@ const reasons: Reason[] = [
     num: '01',
     title: 'Qualified Swimming Pool Engineer',
     description:
-      'Every project is personally designed and supervised by Robert M. Icututa, a certified pool engineer with real field experience.',
+      'Every project is personally designed and supervised by Robert M. Kututa, a certified pool engineer with real field experience.',
   },
   {
     num: '02',
