@@ -1,7 +1,7 @@
+import { Suspense, lazy } from 'react';
 import Topbar from '@/components/Topbar';
 import Navbar from '@/components/Navbar';
 import ScrollTop from '@/components/ScrollTop';
-import React, { Suspense, lazy } from 'react';
 const HeroSlider = lazy(() => import('@/sections/HeroSlider'));
 import QuickStrip from '@/sections/QuickStrip';
 import About from '@/sections/About';
