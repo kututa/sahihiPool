@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import { useHead } from '@unhead/react'
-import '../App.css'
+import { useState, useEffect } from 'react';
+import '../App.css';
 
 export default function Home() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  useHead({
-    title: 'Sahihi Pools — Home',
-    meta: [
-      { name: 'description', content: 'Sahihi Pools — professional pool construction, repair and maintenance across Kenya.' },
-      { property: 'og:title', content: 'Sahihi Pools — Home' },
-      { property: 'og:description', content: 'Professional pool construction and maintenance — domestic & commercial.' },
-      { property: 'og:image', content: '/images/hero1.jpg' },
-    ],
-    link: [
-      { rel: 'canonical', href: 'https://sahihipools.example/' }
-    ]
-  })
+  useEffect(() => {
+    document.title = 'Sahihi Pools — Home';
+  }, []);
 
   return (
     <>
       <h1>Vite + React</h1>
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
     </>
-  )
+  );
 }
